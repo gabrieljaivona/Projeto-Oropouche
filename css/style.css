@@ -1,0 +1,319 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Roboto:wght@100&family=Sriracha&display=swap');
+/* Estiliza o corpo da página */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --corBranca: #FFFFFF;
+    --corPreta: #000000;
+    --cor1: #8C6B4F;
+    --cor2: #A65729;
+    --cor3: #733F34;
+    --cor4: #D9BDBA;
+    --cor5: #400404;
+
+    --cor6: #BF9F3F;
+    --cor7: #8C6B4F;
+    --cor8: #733F34;
+    --cor9: #BF8E8A;
+    --cor10: #D9BDBA;
+
+    --cor11: #594E44; 
+    --cor12: #F2DECB; 
+    --cor13: #FFCEA3; 
+    --cor14: #FFB370; 
+    
+    --font-roboto : Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-sarif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android', cursive;
+}
+
+body {
+    font-family: Lora, serif;
+    background-color: var(--corBranca);
+    display: flex; 
+    overflow-x: hidden;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;  
+    min-height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: solid 2px var(--cor5);
+
+    top: 0;
+
+}
+
+.logo > img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-nav{
+    display: flex;
+    gap: 40px;;
+    flex-direction: row;
+    list-style: none;
+}
+.item-nav a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    width: 150px;
+    background-color: transparent;
+    font-family: var(--font-roboto);
+    font-weight: 900;
+    font-size: 1.6em;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--cor5);
+    text-shadow: 2px 2px 4px var(--cor1);
+
+    transition: .5s;
+}
+
+.item-nav:hover{
+    background-color: var(--cor4);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+section{
+    padding: 15px 40px;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.267), rgba(255, 255, 255, 0.267)), url(../img/mosquito-altamente-detalhado.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+.tituloPrincipal{
+    margin-top: 200px;
+    font-family: var(--font-roboto);
+    font-size: 2.5rem;
+    color: var(--cor5);
+    text-shadow: 4px 4px 4px var(--cor1);
+}
+
+.areaPesquisa > input{
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    border: solid 2.5px var(--cor4);
+    outline: none;
+    box-shadow:4px 4px 12px 2px var(--cor1);
+}
+
+.areaPesquisa > input:focus{
+    outline: solid 3px var(--cor5);
+    box-shadow: 2px 2px 2px 2px var(--cor1);
+}
+
+.areaPesquisa > button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--cor5);
+    color: var(--corBranca);
+    
+    transition: .3s;
+}
+
+.areaPesquisa > button:hover{
+    box-shadow: 2px 2px 4px 4px var(--cor5);
+    transform: translateY(-3px);
+}
+
+.titulos{ /*Todos os H2*/
+    font-size: 2.4rem;
+    font-family: var(--font-roboto);
+    font-weight: 900;
+}
+
+.descricao{/*Todos os paragrafos*/
+    font-size: 1.3rem;
+    font-family: var(--font-roboto);
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.parte1{
+    display: none;
+    flex-direction: column;
+    text-align: justify;
+    background-color: var(--cor12);
+    margin: 25px 0px;
+    color: var(--corBranca);
+}
+
+.sobre{
+    color: var(--corPreta);
+}
+
+.iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.parte2{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--cor12);
+    margin: 25px 0px;
+    font-family: var(--font-roboto);
+}
+
+.transmisao{
+    color: var(--corPreta);
+    font-weight: 900;
+}
+
+.list-transmisao > li a{
+    font-size: 1.2em;
+    font-family: var(--font-roboto);
+    font-weight: bold;
+}
+
+.list-transmisao li a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--corPreta);
+}
+
+.sintomas{
+    width: 100%;
+    height: 500px;
+}
+
+.sintomas h2 {
+    color: var(--corPreta); 
+    
+}
+
+.linha-de-sintomas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    
+}
+.card-sintomas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    background-color: var(--corBranca);
+    border: solid 2px #868686;
+
+    transition: .5s;
+}
+
+.card-sintomas:hover{
+    transform: translateY(-4px);
+}
+
+.card-sintomas > img{
+    height: 100px;
+    width: 130px;
+}
+
+.parte3{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    height: 800px;
+    margin: 20px 0px;
+    background-color: var(--cor12);
+    color: var(--corPreta);
+    font-weight: 900;
+}
+
+.prevensao > ul{
+    padding-left: 30px;
+}
+
+.prevensao > ul li{
+    font-size: 1.3rem;
+    font-family: var(--font-roboto);
+    font-weight: 900;
+    line-height: 40px;
+}
+
+#secaoAviso{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    margin: 20px 0px;
+    background-color: var(--cor12);
+    color: red;
+    font-weight: 900;
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    font-size: 1.8em;
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor14);
+
+    bottom: 0;
+}
